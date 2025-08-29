@@ -86,13 +86,23 @@ const Home = () => {
         autoComplete="off"
       />
 
-      <Button variant={'pressable'} onClick={() => setBarcodeValue(input)} className='px-24 py-6 text-xl h-14'>
+      <Button
+        variant={'pressable'}
+        onClick={() => setBarcodeValue(input)}
+        className='px-24 py-6 text-xl h-14'
+        disabled={!input.trim()}
+      >
         Generate
       </Button>
 
       <svg ref={setRefs} />
         
-      <Button variant={'pressable'} onClick={handleDownload}  className='px-24 py-6 text-xl h-14'>
+      <Button
+        variant={'pressable'}
+        onClick={handleDownload}
+        className='px-24 py-6 text-xl h-14'
+        disabled={!barcodeValue.trim()}
+      >
         Download
       </Button>
 
