@@ -13,7 +13,7 @@ const Home = () => {
   const { inputRef } = useBarcode({
     value: barcodeValue,
     options: {
-      background: '#ffcccc',
+      background: '#c7d4e2',
     }
   });
 
@@ -64,24 +64,24 @@ const Home = () => {
   return (
     <div className='flex flex-col items-center p-16 gap-8'>
       <Link href={'https://spiderfunction.com'} target="_blank" rel="noopener noreferrer">
-        <Image src={'/logo.png'} 
+        <Image src={'/logo-only.png'} 
         alt='Spider Function Logo'
         width={120}
         height={120}
-        className='hover:animate-spin transition-all duration-500 hover:scale-110'
+        className='transition-all duration-500 hover:scale-110'
         />
       </Link>
 
       <div>
         <h1 className='text-3xl uppercase font-bold tracking-wider'>Barcode Generator</h1>
-        <p>Made by <Link href={'https://spiderfunction.com'} className='text-red-600 underline underline-offset-6 hover:text-red-600/80 transition-all duration-300' target="_blank" rel="noopener noreferrer">Spider Function</Link></p>
+        <p>Made by <Link href={'https://spiderfunction.com'} className='text-primary underline underline-offset-6 hover:text-primary/80 transition-all duration-300' target="_blank" rel="noopener noreferrer">Spider Function</Link></p>
       </div>
 
       <input
         type="text"
         value={input}
         onChange={e => setInput(e.target.value)}
-        className="border px-4 py-2 text-black w-full max-w-md focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-transparent"
+        className="border px-4 py-2 text-black w-full max-w-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         placeholder="Enter barcode value"
         autoComplete="off"
       />
